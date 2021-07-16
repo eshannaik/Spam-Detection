@@ -1,0 +1,31 @@
+<!Doctype Html>
+	<html>
+		<head>
+			<title>SPAM DETECTION</title>
+			<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='1.css') }}">
+		</head>
+
+		<body>
+			<center><h1>Detection of spam SMS.</h1></center>
+			<form method ="POST" id="Answer" action="{{ url_for('prediction')}}">
+				<br>
+				<div>
+					<p><h3>The inputed SMS was :</h3> </p>
+					<p><h3>{{message}}</h3></p>
+				</div>
+				<br>
+				<br>
+			</form>
+
+			<div>
+				<div>
+					<h3>Result:</h3>
+				</div>
+				<p><h3>{{final_result}}</h3></p>
+				<div>
+					<h3>The given score is:</h3>
+				</div>
+				<p><h3>{{score}}</h3></p>
+			</div>
+		</body>
+	</html>
